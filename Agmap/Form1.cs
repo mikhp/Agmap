@@ -143,5 +143,12 @@ namespace Agmap
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.MyMark.Clear();
+            this.routes.Clear();
+            this.polygons.Clear();
+        }
+
     }
 }
