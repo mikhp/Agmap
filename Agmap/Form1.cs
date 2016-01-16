@@ -96,8 +96,9 @@ namespace Agmap
         {
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
+                string file = Application.StartupPath + "\\icon\\right.png";
                 PointLatLng point = gMapControl1.FromLocalToLatLng(e.X, e.Y);
-                Bitmap bitmap = Bitmap.FromFile("F:\\晴.png") as Bitmap;
+                Bitmap bitmap = Bitmap.FromFile(file) as Bitmap;
                 GMapMarker gmm = new GMapMarkerImage(point, bitmap);
                 gmm.ToolTipText = string.Format("x:{0}  y:{1}", point.Lat, point.Lng);
                 gmm.ToolTipMode = MarkerTooltipMode.OnMouseOver;
